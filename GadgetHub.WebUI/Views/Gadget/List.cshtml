@@ -1,0 +1,27 @@
+﻿@model IEnumerable<GadgetHub.Domain.Entities.Gadget>
+
+<h2>Gadget Catalog</h2>
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Brand</th>
+			<th>Price</th>
+			<th>Description</th>
+			<th>Category</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var gadget in Model)
+		{
+			<tr>
+				<td>@gadget.Name</td>
+				<td>@gadget.Brand</td>
+				<td>@gadget.Price.ToString("C")</td>
+				<td>@gadget.Description</td>
+				<td>@gadget.Category</td>
+			</tr>
+		}
+	</tbody>
+</table>
