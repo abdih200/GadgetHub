@@ -52,6 +52,8 @@ C:\Users\abdhiri\source\repos\GadgetHub\GadgetHub.WebUI\bin\roslyn\VBCSCompiler.
 C:\Users\abdhiri\source\repos\GadgetHub\GadgetHub.WebUI\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\abdhiri\source\repos\GadgetHub\GadgetHub.WebUI\bin\Antlr3.Runtime.dll
 C:\Users\abdhiri\source\repos\GadgetHub\GadgetHub.WebUI\bin\Castle.Core.dll
+C:\Users\abdhiri\source\repos\GadgetHub\GadgetHub.WebUI\bin\EntityFramework.dll
+C:\Users\abdhiri\source\repos\GadgetHub\GadgetHub.WebUI\bin\EntityFramework.SqlServer.dll
 C:\Users\abdhiri\source\repos\GadgetHub\GadgetHub.WebUI\bin\GadgetHub.Domain.dll
 C:\Users\abdhiri\source\repos\GadgetHub\GadgetHub.WebUI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\abdhiri\source\repos\GadgetHub\GadgetHub.WebUI\bin\Microsoft.Web.Infrastructure.dll
@@ -69,7 +71,10 @@ C:\Users\abdhiri\source\repos\GadgetHub\GadgetHub.WebUI\bin\System.Web.WebPages.
 C:\Users\abdhiri\source\repos\GadgetHub\GadgetHub.WebUI\bin\System.Web.WebPages.Razor.dll
 C:\Users\abdhiri\source\repos\GadgetHub\GadgetHub.WebUI\bin\WebGrease.dll
 C:\Users\abdhiri\source\repos\GadgetHub\GadgetHub.WebUI\bin\GadgetHub.Domain.pdb
+C:\Users\abdhiri\source\repos\GadgetHub\GadgetHub.WebUI\bin\GadgetHub.Domain.dll.config
 C:\Users\abdhiri\source\repos\GadgetHub\GadgetHub.WebUI\bin\Castle.Core.xml
+C:\Users\abdhiri\source\repos\GadgetHub\GadgetHub.WebUI\bin\EntityFramework.xml
+C:\Users\abdhiri\source\repos\GadgetHub\GadgetHub.WebUI\bin\EntityFramework.SqlServer.xml
 C:\Users\abdhiri\source\repos\GadgetHub\GadgetHub.WebUI\bin\Ninject.xml
 C:\Users\abdhiri\source\repos\GadgetHub\GadgetHub.WebUI\bin\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\abdhiri\source\repos\GadgetHub\GadgetHub.WebUI\bin\System.Threading.Tasks.Extensions.xml
