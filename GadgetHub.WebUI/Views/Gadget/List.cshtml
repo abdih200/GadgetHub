@@ -1,32 +1,23 @@
 ﻿@model GadgetHub.WebUI.Models.GadgetListViewModel
 @using GadgetHub.WebUI.Helpers
 
-<h2>Gadget Catalog</h2>
+<h2 class="text-center">Gadget Catalog</h2>
 
-<table class="table">
-	<thead>
-		<tr>
-			<th>Name</th>
-			<th>Brand</th>
-			<th>Price</th>
-			<th>Description</th>
-			<th>Category</th>
-		</tr>
-	</thead>
-	<tbody>
-		@foreach (var gadget in Model.Gadgets)
-		{
-			<tr>
-				<td>@gadget.Name</td>
-				<td>@gadget.Brand</td>
-				<td>@gadget.Price.ToString("C")</td>
-				<td>@gadget.Description</td>
-				<td>@gadget.Category</td>
-			</tr>
-		}
-	</tbody>
-</table>
+<div class="row">
+    <div class="col-md-3">
+        @Html.Action("Menu", "Nav")
+    </div>
 
-<div class="pagination">
-	@Html.PageLinks(Model.PagingInfo, x => Url.Action("List", new { page = x }))
+    <div class="col-md-9">
+        <div class="d-flex flex-wrap justify-content-center">
+            @foreach (var gadget in Model.Gadgets)
+            {
+                @Html.Partial("ProductSummary", gadget)
+            }
+        </div>
+
+        <div class="pagination d-flex justify-content-center mt-3">
+            @Html.PageLinks(Model.PagingInfo, x => Url.Action("List", new { page = x, category = ViewBag.CurrentCategory }))
+        </div>
+    </div>
 </div>

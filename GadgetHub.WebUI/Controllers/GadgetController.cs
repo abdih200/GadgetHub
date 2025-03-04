@@ -8,19 +8,20 @@ namespace GadgetHub.WebUI.Controllers
     public class GadgetController : Controller
     {
         private IGadgetRepository repository;
-        public int PageSize = 5;
+        public int PageSize = 5; 
 
         public GadgetController(IGadgetRepository repo)
         {
             repository = repo;
         }
 
-        public ViewResult List(int page = 1)
+        public ViewResult List(string category, int page = 1)
         {
             var gadgets = repository.Gadgets
-                .OrderBy(g => g.GadgetId)  
-                .Skip((page - 1) * PageSize) 
-                .Take(PageSize); 
+                .Where(g => category == null || g.Category == category)
+                .OrderBy(g => g.GadgetId)
+                .Skip((page - 1) * PageSize)
+                .Take(PageSize);
 
             var model = new GadgetListViewModel
             {
@@ -29,10 +30,13 @@ namespace GadgetHub.WebUI.Controllers
                 {
                     CurrentPage = page,
                     ItemsPerPage = PageSize,
-                    TotalItems = repository.Gadgets.Count()
+                    TotalItems = category == null ?
+                        repository.Gadgets.Count() :
+                        repository.Gadgets.Count(g => g.Category == category)
                 }
             };
 
+            ViewBag.CurrentCategory = category;
             return View(model);
         }
     }
