@@ -6,6 +6,11 @@
 		<h6 class="card-subtitle mb-2 text-muted">@Model.Brand</h6>
 		<p class="card-text">@Model.Description</p>
 		<p class="text-success fw-bold">@Model.Price.ToString("C")</p>
+
+		<form action="@Url.Action("AddToCart", "Cart")" method="post">
+			<input type="hidden" name="gadgetId" value="@Model.GadgetId" />
+			<input type="hidden" name="returnUrl" value="@Request.Url.PathAndQuery" />
+			<button type="submit" class="btn btn-primary">Add to Cart</button>
+		</form>
 	</div>
 </div>
-

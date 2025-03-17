@@ -14,7 +14,6 @@ C:\Users\abdhiri\source\repos\GadgetHub\GadgetHub.Domain\bin\Debug\EntityFramewo
 C:\Users\abdhiri\source\repos\GadgetHub\GadgetHub.Domain\bin\Debug\Ninject.xml
 C:\Users\abdhiri\source\repos\GadgetHub\GadgetHub.Domain\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\abdhiri\source\repos\GadgetHub\GadgetHub.Domain\bin\Debug\System.Threading.Tasks.Extensions.xml
-C:\Users\abdhiri\source\repos\GadgetHub\GadgetHub.Domain\obj\Debug\GadgetHub.Domain.csproj.AssemblyReference.cache
 C:\Users\abdhiri\source\repos\GadgetHub\GadgetHub.Domain\obj\Debug\GadgetHub.Domain.csproj.CoreCompileInputs.cache
 C:\Users\abdhiri\source\repos\GadgetHub\GadgetHub.Domain\obj\Debug\GadgetHub.Domain.csproj.CopyComplete
 C:\Users\abdhiri\source\repos\GadgetHub\GadgetHub.Domain\obj\Debug\GadgetHub.Domain.dll
