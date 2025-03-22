@@ -32,3 +32,5 @@
 <p class="fw-bold">Total: @Model.Cart.ComputeTotalValue().ToString("C")</p>
 
 <a href="@Model.ReturnUrl" class="btn btn-secondary">Continue Shopping</a>
+
+<a class="btn btn-success" href="@Url.Action("Checkout", "Cart")">Checkout Now</a>

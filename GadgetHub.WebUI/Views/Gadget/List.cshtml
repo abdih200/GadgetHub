@@ -13,3 +13,4 @@
 <div class="pagination d-flex justify-content-center mt-3">
 	@Html.PageLinks(Model.PagingInfo, x => Url.Action("List", new { page = x, category = ViewBag.CurrentCategory }))
 </div>
+@Html.Action("Summary", "Cart")

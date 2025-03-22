@@ -1,0 +1,6 @@
+﻿@model GadgetHub.WebUI.Models.Cart
+
+<a href="@Url.Action("Index", "Cart")" class="btn btn-outline-light">
+	<strong>Cart:</strong> @Model.Items.Sum(i => i.Quantity) items |
+	Total: @Model.ComputeTotalValue().ToString("C")
+</a>

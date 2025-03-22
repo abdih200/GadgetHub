@@ -5,7 +5,8 @@
 		<h5 class="card-title">@Model.Name</h5>
 		<h6 class="card-subtitle mb-2 text-muted">@Model.Brand</h6>
 		<p class="card-text">@Model.Description</p>
-		<p class="text-success fw-bold">@Model.Price.ToString("C")</p>
+
+		<p class="text-success fw-bold">@String.Format("{0:C}", Model.Price)</p>
 
 		<form action="@Url.Action("AddToCart", "Cart")" method="post">
 			<input type="hidden" name="gadgetId" value="@Model.GadgetId" />
