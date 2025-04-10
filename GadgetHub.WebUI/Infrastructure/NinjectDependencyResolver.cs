@@ -6,6 +6,8 @@ using Moq;
 using GadgetHub.Domain.Abstract;
 using GadgetHub.Domain.Entities;
 using GadgetHub.Domain.Concrete;
+using System.Configuration;
+
 
 
 namespace GadgetHub.WebUI.Infrastructure
@@ -32,8 +34,20 @@ namespace GadgetHub.WebUI.Infrastructure
 
         private void AddBindings()
         {
+            // Bind the gadget repository
             kernel.Bind<IGadgetRepository>().To<EFGadgetRepository>();
+
+            // Step 4 - Email Processor binding
+            EmailSettings emailSettings = new EmailSettings
+            {
+                WriteAsFile = bool.Parse(System.Configuration.ConfigurationManager
+                    .AppSettings["Email.WriteAsFile"] ?? "false")
+            };
+
+            kernel.Bind<IOrderProcessor>().To<EmailOrderProcessor>()
+                  .WithConstructorArgument("settings", emailSettings);
         }
+
     }
 }
 

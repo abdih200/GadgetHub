@@ -16,7 +16,7 @@
 		@foreach (var item in Model.Cart.Items)
 		{
 			<tr>
-				<td>@item.Name</td>
+				<td>@item.GadgetName</td>
 				<td>@item.Quantity</td>
 				<td>@item.Price.ToString("C")</td>
 				<td>@(item.Quantity * item.Price).ToString("C")</td>

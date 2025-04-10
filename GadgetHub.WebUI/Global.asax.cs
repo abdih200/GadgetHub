@@ -5,6 +5,8 @@ using System.Web.Routing;
 using GadgetHub.WebUI.Infrastructure;
 using Ninject;
 using GadgetHub.WebUI.Models;
+using GadgetHub.Domain.Entities;
+
 
 namespace GadgetHub.WebUI
 {

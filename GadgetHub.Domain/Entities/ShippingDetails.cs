@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace GadgetHub.WebUI.Models
+namespace GadgetHub.Domain.Entities
+
 {
     public class ShippingDetails
     {

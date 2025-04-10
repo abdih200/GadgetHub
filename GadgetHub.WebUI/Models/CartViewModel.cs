@@ -1,4 +1,6 @@
 ﻿using GadgetHub.WebUI.Models;
+using GadgetHub.Domain.Entities;
+
 
 namespace GadgetHub.WebUI.Models
 {

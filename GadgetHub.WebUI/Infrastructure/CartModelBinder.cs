@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using GadgetHub.WebUI.Models;
+using GadgetHub.Domain.Entities;
+
 
 
 namespace GadgetHub.WebUI.Infrastructure

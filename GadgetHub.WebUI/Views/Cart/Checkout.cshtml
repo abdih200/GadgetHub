@@ -1,4 +1,6 @@
-﻿@model GadgetHub.WebUI.Models.ShippingDetails
+﻿@model GadgetHub.Domain.Entities.ShippingDetails
+@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
 
 @{
 	ViewBag.Title = "Checkout";

@@ -153,11 +153,9 @@
     <Compile Include="Infrastructure\CartModelBinder.cs" />
     <Compile Include="Infrastructure\NinjectDependencyResolver.cs" />
     <Compile Include="Infrastructure\PagingHelpers.cs" />
-    <Compile Include="Models\Cart.cs" />
     <Compile Include="Models\CartViewModel.cs" />
     <Compile Include="Models\GadgetListViewModel.cs" />
     <Compile Include="Models\PagingInfo.cs" />
-    <Compile Include="Models\ShippingDetails.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -165,6 +163,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\ErrorStyles.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\Site.css" />

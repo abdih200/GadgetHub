@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using GadgetHub.Domain.Entities;
 
-namespace GadgetHub.WebUI.Models
+
+namespace GadgetHub.Domain.Entities
 {
     public class Cart
     {
@@ -17,7 +19,7 @@ namespace GadgetHub.WebUI.Models
                 lineCollection.Add(new CartItem
                 {
                     GadgetId = gadgetId,
-                    Name = name,
+                    GadgetName = name,
                     Price = price,
                     Quantity = quantity
                 });
@@ -49,9 +51,9 @@ namespace GadgetHub.WebUI.Models
     public class CartItem
     {
         public int GadgetId { get; set; }
-        public string Name { get; set; }
-        public decimal Price { get; set; }
+        public string GadgetName { get; set; }
         public int Quantity { get; set; }
+        public decimal Price { get; set; } 
     }
 }
 
