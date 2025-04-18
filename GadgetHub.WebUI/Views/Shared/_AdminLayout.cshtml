@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Admin - GadgetHub</title>
+	<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+	<link href="~/Content/ErrorStyles.css" rel="stylesheet" />
+	<script src="~/Scripts/jquery-3.6.0.min.js"></script>
+	<script src="~/Scripts/jquery.validate.min.js"></script>
+	<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+</head>
+<body>
+	<div class="container mt-4">
+		@if (TempData["message"] != null)
+		{
+			<div class="alert alert-success">@TempData["message"]</div>
+		}
+		@RenderBody()
+	</div>
+	<script src="~/Scripts/jquery-3.6.0.min.js"></script>
+	<script src="~/Scripts/jquery.validate.min.js"></script>
+	<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+	<link href="~/Content/ErrorStyles.css" rel="stylesheet" />
+</body>
+</html>

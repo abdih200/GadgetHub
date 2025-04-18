@@ -1,16 +1,24 @@
 ﻿@model GadgetHub.WebUI.Models.GadgetListViewModel
 @using GadgetHub.WebUI.Infrastructure
 
-<h2 class="text-center">Gadget Catalog</h2>
+@{
+	ViewBag.Title = "Product Catalog";
+}
 
-<div class="d-flex flex-wrap justify-content-center">
-	@foreach (var gadget in Model.Gadgets)
-	{
-		@Html.Partial("ProductSummary", gadget)
-	}
-</div>
+<h2>@(ViewBag.CurrentCategory ?? "All Products")</h2>
 
-<div class="pagination d-flex justify-content-center mt-3">
+@foreach (var item in Model.Gadgets)
+{
+	<div class="card mb-3">
+		<div class="card-body">
+			<h4 class="card-title">@item.Name</h4>
+			<p class="card-text"><strong>Brand:</strong> @item.Brand</p>
+			<p class="card-text">@item.Description</p>
+			<p class="card-text"><strong>Price:</strong> @item.Price.ToString("C")</p>
+		</div>
+	</div>
+}
+
+<div class="d-flex justify-content-center mt-3">
 	@Html.PageLinks(Model.PagingInfo, x => Url.Action("List", new { page = x, category = ViewBag.CurrentCategory }))
 </div>
-@Html.Action("Summary", "Cart")

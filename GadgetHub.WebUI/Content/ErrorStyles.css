@@ -6,3 +6,11 @@
 input.input-validation-error {
     border: 2px solid red;
 }
+input.input-validation-error {
+    border: 2px solid red;
+}
+
+span.field-validation-error {
+    color: red;
+    font-size: 0.85em;
+}

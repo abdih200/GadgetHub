@@ -1,0 +1,39 @@
+﻿@model IEnumerable<GadgetHub.Domain.Entities.Gadget>
+
+@{
+	ViewBag.Title = "Admin Panel - Gadget List";
+	Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<p>
+	<a href="@Url.Action("Create", "Admin")" class="btn btn-primary">Add New Gadget</a>
+</p>
+
+<table class="table table-bordered table-striped table-sm">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Brand</th>
+			<th>Price</th>
+			<th>Category</th>
+			<th>Actions</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var gadget in Model)
+		{
+			<tr>
+				<td>@gadget.Name</td>
+				<td>@gadget.Brand</td>
+				<td>@gadget.Price.ToString("C")</td>
+				<td>@gadget.Category</td>
+				<td>
+					<a class="btn btn-sm btn-warning" href="@Url.Action("Edit", "Admin", new { gadgetId = gadget.GadgetId })">Edit</a>
+					<a class="btn btn-sm btn-danger" href="@Url.Action("Delete", "Admin", new { gadgetId = gadget.GadgetId })">Delete</a>
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>
